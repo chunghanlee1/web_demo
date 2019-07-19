@@ -1,0 +1,1856 @@
+
+/*General Formatting
+------------------------------------------------------------------------*/
+body{
+	margin:0px;
+	overflow-x:hidden;
+}
+body *{
+	border-color:rgb(210,210,210);
+}
+p,h1,h2,h3,h4,h5,h6,li,span{
+	font-family:arial, serif;
+	color:rgb(57,57,57);
+}
+p{
+	font-size:93%;
+}
+
+/*Page structure*/
+.centered-content{
+	max-width:980px;
+	margin:0 auto;
+	position:relative;
+}
+.largebodyblock, .smallbodyblock{
+	vertical-align:top;
+	display:inline-block;
+}
+.largebodyblock{
+	width:660px;
+}
+.smallbodyblock{
+	width:310px;
+}
+.sidebar1{
+	position:absolute;
+	top:0px;
+	right:0;
+}
+.sidebar2{
+	position:absolute;
+	top:655px;
+	right:1px;
+}
+/*Content styling*/
+.maincontent a, .moreinfo a, .bottomgreyarea a, .bottomdarkarea a{
+	text-decoration:none;
+	color:inherit;
+}
+.fullcoveragelink{
+	display:block;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.toplink{
+	position:relative;
+	z-index:2;
+}
+.sectiontitle{
+	font-weight:normal;
+	font-size:155%;
+	text-align:left;
+	color:rgb(30,30,30);
+}
+.titlestyle{
+	margin:0;
+	color:rgb(40,40,40);
+}
+.titlestyle:hover{
+	color:rgb(0,60,200);
+}
+.titlestyle2{
+	color:white;
+}
+.titlestyle2:hover{
+	text-decoration:underline;
+}
+.relatednewsstyle{
+	line-height:15px;
+	color:rgb(30,30,30);
+	margin-top:0;
+	padding:0;
+}
+.relatednewsstyle:hover{
+	color:rgb(0,60,200)
+}
+.timeposted{
+	margin-top:5px;
+	padding-top:0;
+	line-height:20px;
+	font-size:90%;
+}
+.timetag{
+	padding:0 10px 0 3px;
+	border-right:solid rgb(200,200,200) 1px;
+	margin-right:5px;
+}
+.categorytag{
+	color:rgb(150,0,0);
+}
+.categorytag:hover{
+	color:rgb(0,60,200)
+}
+hr{
+	width:40px;
+	margin:0.1px 0 10px 0px;
+	background-color:rgb(150,0,0);
+	text-align:left; /*For IE*/
+	border:rgb(150,0,0) solid 1px;
+}
+.videotag{
+	position:absolute;
+	bottom:0;
+	left:0;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	justify-content:flex-start;
+	font-size:70%;
+}
+.fa-play{
+	padding:5px;
+	background-color:white;
+	color:black;
+}
+.videotimetag{
+	background-color:rgba(10,10,10, .8);
+	padding:5px;
+	color:white;
+}
+.fa-caret-square-o-right{
+	color:black;
+	padding-right:3px;
+}
+
+.videothumbfullwidth{
+	background-position:center;
+	background-size:cover;
+	width:100%;
+	position:relative;
+	background-image: url("/static/images/glasses.jpg");
+}
+.videothumbfullwidth::before{
+	content:"";
+	display:inline-block;
+	padding-top:50%;
+}
+.videothumbhalfwidth{
+	background-image: url("/static/images/dice.jpg");
+	background-size:cover;
+	background-position:center;
+	vertical-align:top;
+	width:40%;
+	position:relative;
+	display:inline-block;
+}
+.videothumbhalfwidth::before{
+	content:"";
+	display:inline-block;
+	padding-top:50%;
+}
+
+@media only screen and (max-width:990px){
+	.centered-content{
+		padding:0 10px;
+	}
+	.largebodyblock, .smallbodyblock{
+		width:100%;
+		position:static;
+	}
+	.timetag, .categorytag{
+		font-size:100%;
+	}
+}
+@media only screen and (max-width:599px){
+	.centered-content{
+		padding:0 5px;
+	}
+	.sectiontitle{
+		font-size:125%;
+	}
+}
+
+/*---------------------------------------------------------------------
+End of general formatting*/
+
+
+
+
+
+
+
+
+
+
+/*Heading and Navigation area
+------------------------------------------------------------------------*/
+
+/*Top grey cookie banner
+------------------------*/
+.topcookiebanner {
+	background-color: rgb(55,55,55);
+	padding:10px;
+}
+@media only screen and (min-width: 600px){
+	.cookiebannercenter{
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	justify-content:center;
+	max-width:1000px;
+	margin:auto;
+	}
+	#cookiesonthebbc{
+	margin-right:40px;
+	max-width:150px;
+	}
+	#topcookiestatement{
+	width:50%;
+	max-width:370px;
+	margin-right:60px;
+	font-size:83%;
+	color:rgb(190,190,190);
+	}
+}	
+@media only screen and (max-width: 599px){
+	#cookiesonthebbc{
+	width:100%;	
+	margin-bottom:10px;
+	}
+	#topcookiestatement{
+	font-size:83%;
+	color:rgb(190,190,190);
+	margin-bottom:10px;
+	}
+}
+.topcookiebanner a{
+	color: orange;
+	text-decoration:none;
+}
+.topcookiebanner a:hover{
+	color:white;
+	text-decoration:underline;
+}
+.topcookiebanner p, .topcookiebanner h3{
+	color:white;
+	margin:1px;
+}
+#topcookiestatement p{
+	color:rgb(190,190,190);
+}
+#cookiecontinue{
+	margin-left:20px;
+}
+#cookiecontinue p{
+	font-weight:bold;
+	font-size:80%;
+	line-height:120%;
+	margin-top:7px;
+}
+
+/*White Product Offering Nav
+------------------------------------*/
+.productofferingbanner{
+	background-color:rgb(255,255,245);
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+}
+#bbcgrey{
+	height:1.5rem;
+	margin:auto 0px auto 0px;
+	padding-right:0px;
+}
+.productofferings{
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	width:950px;
+}
+.productofferings ul{
+	padding-left:0;
+	margin:0 0 0 20px;
+	font-weight:bold;
+	line-height:0px;
+}
+.fa-user-circle{
+	position:absolute;
+	transform:translate(118px,10px);
+}
+.productofferings li, .productofferings input{
+	display:inline-block;
+	font-size:80%;
+	}
+.productofferings li{
+	padding: 18px 15px 12px 15px;
+	height:1.5rem;
+	border-right:.5px solid rgb(200,200,200);
+	border-bottom:5px solid transparent;
+	box-sizing:border-box;
+	margin:auto;
+}
+.productofferings a{
+	text-decoration:none;
+	color:rgb(50,50,50);
+}
+.productofferings li:nth-child(1){
+	padding-left:40px;
+	padding-right:55px;
+	border-left:.5px solid rgb(200,200,200);
+}
+.productofferings li:nth-child(1):hover{
+	border-bottom:solid 4.5px #2F4F4F;
+}
+.productofferings li:nth-child(2):hover{
+	border-bottom:solid 4.5px #8B0000;
+}
+.productofferings li:nth-child(3):hover{
+	border-bottom:solid 4.5px yellow;
+}
+.productofferings li:nth-child(4):hover{
+	border-bottom:solid 4.5px #00CED1;
+}
+.productofferings li:nth-child(5):hover{
+	border-bottom:solid 4.5px #B22222;
+}
+.productofferings li:nth-child(6):hover{
+	border-bottom:solid 4.5px #696969;
+}
+.productofferings li:nth-child(7):hover{
+	border-bottom:solid 4.5px #696969;
+}
+.searchfunction{
+	margin-left:auto;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+}
+.searchfunction a{
+	padding:3.5px;
+	align-self:center;
+	height:16px;
+	background-color:rgb(230,230,230);
+}
+#fa-caret-down{
+	margin-left:30px;
+	line-height:0px;
+}
+
+#searchbox{
+	height:13px;
+	width:160px;
+	padding:5px;
+	background-color:rgb(230,230,230);
+	align-self:center;
+	border:none;
+}
+#searchbox::-webkit-input-placeholder{
+	color:rgb(50,50,50);
+	font-weight:bold;
+}
+#searchbox:focus::-webkit-input-placeholder{
+	color:grey;
+	font-weight:bold;
+}
+#searchbox::-moz-placeholder{
+	color:rgb(50,50,50);
+	opacity:1;
+}
+#searchbox:focus::-moz-placeholder{
+	color:grey;
+}
+::-ms-input-placeholder{
+	color:rgb(50,50,50);
+}
+input:focus::-ms-input-placeholder{
+	color:rgb(50,50,50);
+}
+@media only screen and (max-width:915px){
+	#signinwords{
+	visibility:hidden;
+	}
+	.productofferings li:nth-child(1){
+	padding-left:0px;
+	padding-right:0px;
+	}
+}
+@media only screen and (max-width:822px){
+	.productofferings li:nth-child(5){
+	display:none;
+	}
+	.productofferings li:nth-child(6){
+	display:none;
+	}
+}
+@media only screen and (max-width:700px){
+	.searchfunction a, .searchfunction img{
+		background-color:rgb(255,255,245);
+	}
+	#searchbox{
+	display:none;
+	}
+	#searchbutton{
+	background-color:rgb(255,255,245);
+	}
+	.productofferings li:nth-child(4){
+	display:inline-block;
+	}
+	.productofferings li:nth-child(5){
+	display:inline-block;
+	}
+}
+@media only screen and (max-width:590px){
+	.productofferings li:nth-child(4){
+	display:none;
+	}
+	.productofferings li:nth-child(5){
+	display:none;
+	}
+}
+@media only screen and (max-width:425px){
+	.productofferings li:nth-child(2){
+	display:none;
+	}
+	.productofferings li:nth-child(3){
+	display:none;
+	}
+	.productofferings ul{
+	margin-left:15px;
+	}
+	.fa-user-circle{
+	transform:translate(113px,11px);
+	}
+}
+
+/*First of the two red page heading
+------------------------------------*/
+.redpageheading{
+	background-color: rgb(187,25,25);
+}
+#redpageheadingcontainer{
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+#redpageheadinghomelink{
+	display:inline-block;
+	color:white;
+	font-size:200%;
+	margin:0;
+}
+#findlocalnews{
+	color:white;
+	font-size:120%;
+	border:1px solid rgb(180,60,60);
+	background-color:transparent;
+	margin:0;
+}
+#findlocalnews:hover{
+	text-decoration:underline;
+}
+#redpageheadinghomelink a, #findlocalnews a{
+	text-decoration:none;
+	color:white;
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+/*Second of the Red navigation Bar
+-----------------------------------*/
+.categorylist{
+	background-color:rgb(169,23,23);
+}
+.rednavbar ul{
+	list-style-type:none;
+	font-size:90%;
+	margin:0;
+	padding:0;
+}
+.rednavbar li{
+	color:white;
+	padding:0 10px;
+	border-right:solid rgb(180,100,100) 0.1px;
+	display:inline-block;
+	margin:5px 0;
+	white-space:nowrap;
+}
+#selectednav{
+	margin:0;
+	padding:0 10px 4px 10px;/*To extend the length of the underline*/
+	border-bottom:white solid 3px;
+}
+.rednavbar li:last-child{
+	border:none;
+}
+.rednavbar li:nth-child(1){
+	padding:0 10px 0 0; /*Prevent left padding on first item of navbar*/
+}
+#fa-caret-down2{
+	margin-left:5px;
+	font-size:70%;
+}
+.rednavbar a{
+	text-decoration:none;
+	color:white;
+}
+.rednavbar a:hover:not(#selectednava){
+	margin:0 -10px 0 -10px;/*Shrink when hovers so net width doesn't change*/
+	padding:0 10px 4px 10px;/*To extend the length of the underline*/
+	border-bottom:white solid 3.3px;
+}
+
+#rednavbarmore{
+	display:inline-block;
+	border:none;
+	background-color:transparent;
+	font-size:inherit;
+	color:inherit;
+	cursor:pointer;
+}
+.rednavbar li:last-child:hover{
+	background-color:black;
+	margin:0;
+	padding:4.8px 10px; /*extend background height coverage*/
+}
+#rednavbarmore:focus{
+	outline:none;/*remove blue outline that appears in chrome*/
+}
+@media only screen and (max-width:940px){
+	.rednavbar li:nth-last-child(2){
+		display:none;
+	}
+}
+@media only screen and (max-width:850px){
+	.rednavbar li:nth-last-child(3){
+		display:none;
+	}
+}
+@media only screen and (max-width:680px){
+	.rednavbar li:nth-last-child(4){
+		display:none;
+	}
+}
+@media only screen and (max-width:590px){
+	.rednavbar li:nth-last-child(5){
+		display:none;
+	}
+}
+@media only screen and (max-width:530px){
+	.rednavbar li:nth-last-child(6){
+		display:none;
+	}
+}
+@media only screen and (max-width:440px){
+	.rednavbar li:nth-last-child(7){
+		display:none;
+	}
+}
+@media only screen and (max-width:390px){
+	.rednavbar li:nth-last-child(8){
+		display:none;
+	}
+}
+/*------------------------------------------------------------------------
+End of heading and navigation section*/
+
+
+
+
+
+
+
+/*White Content Section
+---------------------------------------------------------------------------*/
+
+/*The first underlined title
+----------------------------*/
+.technologytitle h3{
+	font-weight:normal;
+	font-size:130%;
+	line-height:0px;
+	padding-bottom:10px;
+}
+.technologytitle span{
+	border-bottom:solid rgb(180,60,60) 3px;	
+}
+
+/*Main body part that stacks to the top 
+of the screen when screen size shrinks
+-----------------------------------*/
+.asdabug{
+	width:100%;
+	overflow:hidden;
+	padding-bottom:10px;
+	border-bottom:1px solid rgb(210,210,210);
+	position:relative;
+}
+
+.asdabug div{
+	display:inline-block;
+}
+#homemainimage{
+	width:61%;
+	position:relative;
+	background: url('/static/images/car.jpg');/*Crop image*/
+	background-position:bottom;
+	background-size:cover;
+	float:right;
+	margin-top:15px;
+}
+#homemainimage::before{ 
+	content:""; /*Workaround, to set padding*/
+	display:inline-block;
+	padding-top:55%;
+}
+#maincontentwords{
+	width:35%;
+}
+.twitteranddrone{
+	width:100%;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-flex:1;
+	-ms-flex:1;
+	flex:1;
+	padding:15px 0;
+}
+.twitteranddrone .titlestyle{
+	font-size:120%;
+}
+#twittersuffers, #dronelands{
+	border-right:solid rgb(210,210,210) 1px;
+	width:36%;
+	padding:0 10px;
+	position:relative;
+}
+#twitterimage{
+	background-image: url("/static/images/dice.jpg");
+	background-position:center;
+	background-size:cover;
+	width:100%;
+	margin: 10px 0;
+}
+#twitterimage::before{
+	content:"";
+	display:inline-block;
+	padding-top:55%;
+}
+#dronelandsimage{
+	background-image: url("/static/images/dice.jpg");
+	background-position:center;
+	background-size:cover;
+	width:100%;
+	margin: 10px 0;
+	position:relative;
+}
+#dronelandsimage::before{
+	content:"";
+	display:inline-block;
+	padding-top:55%;	
+}
+#articlerows{
+	width:27%;
+	padding-left:10px;
+}
+#articlerows div{
+	display:inline-block;
+	width:100%;
+	height:30%;
+	padding-top:5px;
+	position:relative;
+}
+#articlerows div:not(#askfm/*last-child doesn't work*/){
+	border-bottom:solid rgb(210,210,210) 1px;
+}
+#articlerows .titlestyle{
+	font-size:115%;
+}
+.articletable{
+	width:100%;
+	border-top:solid rgb(210,210,210) 1px;
+}
+.articletable>div{
+	width:47.9%;
+	height:30%;
+	display:inline-block;
+	padding:15px 0 0 0;
+	vertical-align:top; /*So boxes stay aligned when words wrap*/
+	position:relative;
+}
+.articletable>div:nth-of-type(odd){/*For some reason nth-child doesn't work*/
+	margin-right:20px;
+}
+.articletable .titlestyle{
+	font-size:95%;
+	padding:0;
+	margin-bottom:-8px; /*tighten space between title and time tag*/
+}
+.articletable>div:nth-child(3), .articletable>div:nth-child(4){
+	border-top: solid rgb(210,210,210) 1px;
+	border-bottom: solid rgb(210,210,210) 1px;
+}
+.newtech{
+	width:100%;
+	padding-bottom:15px;
+	border-top:solid rgb(210,210,210) 1px;
+	border-bottom:solid rgb(210,210,210) 1px;
+}
+.newtech>div{
+	width:23.5%;
+	margin:0px 2px 5px 2px;
+	display:inline-block;
+	vertical-align:top; /*so changing title length doesn't affect div position*/
+}
+#tvplays{
+	background-image: url("/static/images/dice.jpg");
+}
+#caseadds{
+	background-image: url("/static/images/dice.jpg");
+}
+#bmwshows{
+	background-image: url("/static/images/dice.jpg");
+}
+#bbcreporter{
+	background-image: url("/static/images/dice.jpg");
+}
+@media only screen and (max-width:990px){
+	.articletable .titlestyle{
+	font-size:100%;	
+	}
+	.newtech .titlestyle{
+		margin-top:10px;
+		font-size:115%;
+	}
+}
+@media only screen and (max-width:740px){
+	#mainrelatednews{
+		width:100%;
+		line-height:2.5px;
+	}
+	#mainrelatednews p{
+		display:inline-block;
+		margin-top:0;
+		padding-top:0;
+	}
+	#mainrelatednews p:not(:last-child){
+		margin-right:60px;
+	}
+}
+@media only screen and (max-width:599px){
+	#twittersuffers, #dronelands{
+	border-right:none;
+	}
+	#homemainimage{
+		float:none;
+	}
+	#homemainimage, #maincontentwords{
+		width:100%;
+	}
+	.relatednewsstyle{
+		display:block;
+	}
+	.twitteranddrone{
+		flex-wrap:wrap;
+		padding-bottom:0;
+	}
+	#twittersuffers, #dronelands, #articlerows{
+		width:100%;
+		padding-left:0;
+	}
+	.videotag{
+		display:none;
+	}
+	.articletable{
+		border:none;
+	}
+	.articletable>div{
+		width:100%;
+		border-top:1px solid rgb(210,210,210);
+	}
+	.articletable .titlestyle{
+		font-size:117%;
+	}
+	.articletable>div:nth-child(3), .articletable>div:nth-child(4){
+		border-bottom: none;
+	}
+	.newtech>div{
+		display:block;
+		width:99%;
+	}
+	.newtech .titlestyle{
+		font-size:100%;
+	}
+}
+
+/*Sidebar section that stacks under 
+main body when screen size shrinks
+------------------------------*/
+.sidebar1{
+	padding-bottom:30px;
+	border-left:solid rgb(210,210,210) 1px;
+}
+.sidebar1 .sectiontitle{
+	margin-left:10px;
+}
+.sidebar1>div{
+	display:inline-block;
+	width:100%;
+	margin-bottom:5px;
+	margin-left:10px;
+	vertical-align:top;
+	position:relative;
+}
+.sidebar1 .videothumbhalfwidth{
+	width:35%;
+}
+.sidebar1title{
+	display:inline-block;
+	width:61%;
+}
+.sidebar1 .titlestyle{
+	margin-left:2px;
+}
+
+@media only screen and (max-width:990px){
+	.sidebar1{
+		border-left:none;
+		border-bottom:1px solid rgb(230,230,230);
+	}
+	.sidebar1 div{
+		width:49%;
+		margin-left:0;
+	}
+	.sidebar1 .titlestyle{
+		font-size:105%
+	}
+	.sidebar1 .videothumbhalfwidth{
+		width:40%;
+	}
+	.sidebar1 .sidebar1title{
+		width:56%;
+		margin-left:5px;
+	}
+}
+@media only screen and (max-width:599px){
+	.sidebar1{
+		display:none;
+	}
+}
+
+/*Second body content that comes after 
+first sidebar
+-----------------------------------*/
+.alsointhenews{
+	margin-bottom:10px;
+}
+.alsointhenews div{
+	width:49%;
+	display:inline-block;
+	vertical-align:top;
+}
+#newsbeat{
+	display:inline-block;
+	vertical-align:top;
+	background-color:purple;
+	color:white;
+	font-size:70%;
+	padding:3px;
+}
+.featuresandanalysis{
+	border-top:solid rgb(210,210,210) 1px;
+}
+.someimage_pic{
+	background-image: url("/static/images/dice.jpg");
+}
+.featuresandanalysis:not(.sectiontitle){
+	text-align:justify;
+}
+.featuresandanalysis::after{/*make the text-align work*/
+	content:"";
+	display:inline-block;
+	width:100%;
+}
+.featuresandanalysis>div{
+	width:32%;
+	display:inline-block;
+	vertical-align:top;
+	text-align:left;
+	margin-bottom:15px;
+}
+.featuresandanalysis .titlestyle{
+	font-size:110%;
+}
+.featuresandanalysis p{
+	margin:5px 0;
+}
+.ourexperts{
+	border-top:solid rgb(210,210,210) 1px;
+	width:100%;
+}
+.textbubble{
+	background-color:rgb(230,230,230);
+	padding:10px 0 5px 10px;
+	position:relative;
+}
+.textbubble::after{ /*speech bubble triangle*/
+	content:"";
+	display:block;
+	height:0;
+	width:0;
+	position:absolute;
+	bottom:-15px;
+	left:15px;
+	border-left:1px solid transparent;
+	border-right:20px solid transparent;
+	border-top:15px solid rgb(230,230,230);
+}
+.textbubble p, .textbubble h4{
+	margin:5px;
+}
+.expertwords{
+	width:70%;
+}
+.ourexperts .timetag{
+	border-right:none;
+}
+.expertbio{
+	display:inline-block;
+	margin:15px 0 20px 15px;
+	padding-top:0;
+	font-size:110%;
+}
+.expertinfo{
+	position:relative;
+}
+.ourexperts img{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	background-color:transparent;
+	width:210px;
+	height:130px;
+}
+.expertname{
+	color:rgb(180,40,40);
+}
+.expertname:hover{
+	color:rgb(0,60,200)
+}
+.click{
+	margin-top:10px;
+	border-top: solid 1px rgb(230,230,230);
+	min-height:300px;/*Make sure the layout doesn't mess up under IE*/
+}
+.clickdivflexor{
+	width:100%;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	justify-content:space-between;
+	margin-bottom:5px;
+}
+.clickdivs{
+	width:31.5%;
+	background-color:rgb(230,230,230);
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	flex-direction:column;
+	margin-right:0;
+	margin-left:0;
+	margin-bottom:20px;
+}
+.contentseparator{
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	flex:1;
+}
+.clickdivs .titlestyle, .clickdivs .timeposted{
+	padding:10px;
+}
+.click .titlestyle{
+	font-size:105%;
+}
+.clickdivs .timeposted{
+	margin-top:auto; /*required for flexbox space-around to work*/
+	margin-bottom:0;
+	margin-right:0;
+}
+
+#ces2016{
+	width:100%;
+}
+#ces2016mainimage{
+	width:66%;
+	position:relative;
+	background: url('/static/images/dice.jpg');/*Crop image*/
+	background-position:bottom;
+	background-size:cover;
+	float:right;
+}
+#ces2016mainimage::before{ 
+	content:""; /*Workaround, to set padding*/
+	display:inline-block;
+	padding-top:55%;
+}
+#ces2016content{
+	width:30%;
+}
+.specialreports{
+	border-top:solid rgb(230,230,230) 1px;
+	margin-top:1px;
+}
+.specialreports .timetag{
+	border:none;
+}
+#specialreportsmall{
+	clear:both;
+	text-align:justify;
+	padding-top:10px;
+}
+#specialreportsmall::after{
+	content:"";
+	display:inline-block;
+	width:100%;
+	height:0;
+}/*To justify content*/
+#specialreportsmall>div{
+	display:inline-block;
+	width:32%;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+#specialreportsmall .someimage{
+	margin-bottom:10px;
+}
+#specialreportsmall .titlestyle{
+	font-size:100%;
+}
+@media only screen and (max-width:990px){
+	.alsointhenews .sidebar1title{
+		width:55%;
+		margin-left:5px;
+	}
+	.alsointhenews .videothumbhalfwidth{
+		width:40%;
+	}
+	.featuresandanalysis .titlestyle{
+	margin:5px 0;
+	}
+	.ourexperts .titlestyle{
+		font-size:105%;
+	}
+	#specialreportsmall .titlestyle{
+	font-size:110%;
+	}
+}
+@media only screen and (max-width:599px){
+	#hawking, #whysnoop{
+		width:100%;
+		margin-bottom:10px;
+	}
+	.featuresandanalysis>div{
+		width:100%;
+	}
+	.featuresandanalysis .titlestyle{
+		font-size:100%;
+	}
+	.alsointhenews .titlestyle{
+		font-size:110%;
+	}
+	.alsointhenews div{
+		width:100%;
+	}
+	.alsointhenews .sidebar1title{
+		width:100%;
+	}
+	.someimage{
+		margin-bottom:5px;
+	}
+	.ourexperts img{
+		display:none;
+	}
+	.expertwords{
+		width:90%;
+	}
+	.clickdivflexor{
+		display:inline-block;
+	}
+	.clickdivs{
+		width:100%;
+	}
+	.clickdivs .titlestyle{
+		padding-bottom:0;
+		font-size:98%;
+	}
+	.clickdivs .timeposted{
+		font-size:85%;
+		padding-top:5px;
+	}
+	#ces2016mainimage{
+		float:none;
+		width:100%;
+	}
+	#ces2016content{
+		width:100%;
+		margin:0;
+	}
+	#ces2016title{
+		font-size:120%;
+		margin:10px 0 0 0;
+	}
+	#specialreportsmall>div{
+		width:100%;
+	}
+	#specialreportsmall .titlestyle{
+		font-size:100%;
+	}
+}
+
+/*Final Sidebar
+-------------------------*/
+.sharewith{
+	border-left:solid rgb(210,210,210) 1px;
+	padding-left:10px;
+}
+.sharewith li:not(:first-child){
+	margin-top:10px;
+}
+.sharewith ul{
+	margin:1.2em;
+}
+.sharewith li{
+	font-size:90%;
+}
+.sharewith li > *{
+	display:inline-block;
+	vertical-align:middle;
+}
+#email:hover, #twitteraccount:hover{
+	color:rgb(0,60,200);
+}
+.follow ul{
+	list-style-type:none;
+	text-align:justify;
+	margin:0;
+	padding:0;
+}
+.follow li{
+	text-align:center;
+	background-color:rgb(248,248,248);
+	display:inline-block;
+	width:48%;
+	padding:10px 0;
+	box-sizing:border-box;
+}
+.follow li:nth-child(1){ 
+	border-bottom:solid 4px blue;
+}
+.follow li:nth-child(2){ 
+	border-bottom:solid 4px skyblue;
+}
+#rssnews{
+	width:100%;
+	margin-top:10px;
+	border-bottom:solid 4px black;
+}
+.follow a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.follow a:hover{
+	color:rgb(0,60,200)
+}
+#rssnews:hover{
+	border-color:rgb(0,60,200);
+}
+#listhead{
+	background-color:rgb(240,240,240);
+	padding:10px 15px;
+	margin-top:20px;
+}
+#listhead h2{
+	margin:0;
+}
+#listhead p{
+	font-size:90%;
+	margin:5px 0 0 0;
+}
+.popularnewsflexor{
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.popularnews{
+	width:88%;
+	border-bottom:solid rgb(230,230,230) 1px;
+}
+.popularnews p{
+	display:inline-block;
+	vertical-align:top;
+	font-size:87%;
+}
+.popularnews p:hover{
+	color:rgb(0,60,200);
+}
+.dayoftheweek{
+	width:16%;
+	font-weight:bold;
+	color: rgb(180,10,10)
+}
+.popularnewstitle{
+	width:81%;
+}
+
+.elsewhere{
+	background-color:rgb(240,240,240);
+	padding:10px 15px;
+}
+.elsewhere .sectiontitle{
+	margin:5px 0;
+	font-size:150%;
+	color:rgb(57,57,57)
+}
+.elsewherecontent{
+	width:100%;
+	display:inline-block;
+	vertical-align:top;
+	margin:5px 0;
+}
+.elsewherecontent .videothumbhalfwidth{
+	width:40%;
+}
+.elsewherecontentdetail{
+	display:inline-block;
+	width:57%;
+	margin-left:2px;
+	padding-top:5px;
+}
+.elsewherecontentdetail p{
+	margin:10px 0 0 0;
+	font-size:80%;
+}
+@media only screen and (max-width:990px){
+	.popularnewsflexor{
+		max-height:170px;
+		flex-wrap:wrap;
+	}
+	.popularnews{
+		width:49%;
+	}
+	.dayoftheweek{
+		width:12%
+	}
+	.sharewith{
+		padding-left:0;
+		border:none;
+	}
+	.follow ul{
+		text-align:center;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.follow li, #rssnews{
+		width:30%;
+		margin:0 1%;
+	}
+	#listhead{
+		padding:10px 0;
+		position:relative;
+	}
+	#listhead:before{ /*Extend background*/
+		content:"";
+		position:absolute;
+		height:85%;
+		width:102.5%;
+		background-color:rgb(240,240,240);
+		top:0px;
+		left:-11px;
+		padding-top:10px;
+		z-index:-1;
+	}
+	.elsewherecontent{
+	width:49%;
+	}
+	.elsewherecontent{
+		font-size:110%;
+	}
+}
+@media only screen and (max-width:650px){ /*Has to be 650px or else content overflows*/
+	.popularnewsflexor{
+		max-height:none;
+		align-items:flex-start;
+	}
+	.popularnews{
+		width:100%;
+	}
+	.sharewith .sectiontitle{
+		margin-bottom:10px;
+	}
+	.sharewith ul{
+		margin-top:0;
+		margin-bottom:0;
+	}
+	.follow ul{
+		text-align:justify;
+	}
+	.follow li{
+		width:49%;
+		margin:10px 0;
+	} 
+	#rssnews{
+		width:100%;
+		margin-left:0;
+	}
+}
+@media only screen and (max-width:599px){
+	.sharewith{
+		border-top:solid 1px rgb(230,230,230);
+	}
+	.elsewherecontent{
+		width:100%;
+		font-size:95%;
+	}
+	.elsewherecontent .videothumbhalfwidth{
+	width:100%;
+	}
+}
+
+/*Remaining body section
+---------------------------*/
+.podcasts{
+	border-top:solid rgb(210,210,210) 1px;
+}
+.podcasts .sectiontitle{
+	color:rgb(57,57,57)
+}
+.podcastwindow{
+	width:100%;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+}
+#largescreen{
+	width:68%;
+	background-color:black;
+	padding:7px;
+}
+.largepodcastthumb{
+	width:100%;
+	background-image: url("/static/images/dice.jpg");
+	background-position:center;
+	background-size:cover;
+	position:relative;
+}
+.largepodcastthumb::before{
+	content:"";
+	display:inline-block;
+	padding-top:54%;
+}
+#largescreen h2{
+	position:absolute;
+	font-size:120%;
+	left:35px;
+	bottom:10px;
+}
+#largescreen p{
+	position:absolute;
+	left:8px;
+	bottom:-10px;
+}
+#smallscreen{
+	width:34%;
+	background:rgb(30,30,30)
+}
+#smallscreen>div{
+	width:45%;
+	display:inline-block;
+	margin:7px 6px 20px 6px;
+	vertical-align:top;
+}
+#smallscreen h4{
+	font-size:85%;
+	margin:7px 0 5px 0;
+}
+#smallscreen p{
+	font-size:85%;
+	margin:0;
+	color:rgb(180,180,180);
+}
+.morefrombbc{
+	width:100%;
+	margin:30px 0 10px 0;
+	border-top: solid rgb(210,210,210) 1px;
+}
+.morefrombbc h2{
+	color:rgb(70,70,70);
+}
+#morefrombbcflexor{
+	width:100%;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;/*Must use flex because children div heights need to be the same regardless of content*/
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+#morefrombbcflexor>div{
+	display:inline-block;
+	width:23%;
+	background-color:rgb(230,230,230);
+	margin-bottom:20px;
+}
+.morefrombbc .categorytag, .morefrombbc .titlestyle, .redseparator{
+	margin:7px;
+}
+.redseparator{
+	width:40px;
+	height:0px;
+	border-top:red 1px solid;
+}
+.morefrombbc .titlestyle{
+	font-size:100%;
+	line-height:22px;
+}
+.morefrombbc .categorytag{
+	display:block;
+	font-size:100%;
+}
+@media only screen and (max-width:990px){
+	.podcasts{
+	margin-top:25px;
+	}
+	.podcastwindow{
+		flex-wrap:wrap;
+	}
+	#largescreen, #smallscreen{
+		width:100%;
+		position:relative;
+	}
+	#largescreen::before{/*in order to extend background*/
+		content:"";
+		background-color:black;
+		top:-5px;
+		left:-10px;
+		height:calc(100% + 5px);
+		z-index:-1;
+		position:absolute;
+		width:calc(100% + 20px);
+	}
+	#smallscreen::before{
+		content:"";
+		background-color:rgb(30,30,30);
+		top:0;
+		left:-10px;
+		height:100%;
+		z-index:-1;
+		position:absolute;
+		width:calc(100% + 20px);
+	}
+	#smallscreen>div{
+	width:24%;
+	}
+	#morefrombbcflexor{	
+	justify-content:flex-start;
+	}
+	#morefrombbcflexor>div{
+	width:31%;
+	}
+	#morefrombbcflexor>div:not(:nth-child(3n-3)){
+	margin-right:3%;
+	}
+	.morefrombbc .titlestyle{
+		font-size:105%;
+	}
+	.morefrombbc .categorytag{
+		font-size:110%;
+	}
+}
+@media only screen and (max-width:599px){
+	#smallscreen>div{
+	width:100%;
+	margin:7px 0px 20px 0px;
+	}
+	#smallscreen .titlestyle2, #smallscreen p{
+		font-size:95%;
+	}
+	#morefrombbcflexor>div{
+	width:100%;
+	}
+	#morefrombbcflexor>div:not(:nth-child(3n-3)){
+	margin-right:0;
+	}
+	#morefrombbcflexor .categorytag, #morefrombbcflexor .titlestyle{
+		font-size:100%;
+	}
+}
+/*----------------------------------------------------------------------
+End of white body section*/
+
+
+
+
+
+
+
+/*Bottom shaded ending region
+------------------------------------------------------------------------*/
+.darkarea{
+	height:100%; /*So no blank space is left at the bottom of the page*/
+}
+.bottomdarkarea{
+	background-color:rgb(40,40,40);
+	padding-bottom:20px;
+}
+.bbcnewsservice{
+	padding-top:8px;
+}
+.bbcnewsservice h2{
+	font-weight:normal;
+}
+.bbcnewsserviceflexor{
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+}
+.bbcnewsserviceflexor>div{
+	width:24%;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;/*Need to double flex because otherwise we need to use negative indent to align paragraph and icons, and this messes up borders*/
+	align-items:center;
+}
+.bbcnewsserviceflexor p{
+	font-weight:bold;
+	margin:0;
+}
+.bbcnewsservice .fa{
+	font-size:180%;
+	margin-right:5px;
+}
+.bottomgreyradialarea{
+	background-color:rgb(80,80,80);/*For browsers that do not support gradients*/
+	background:-webkit-radial-gradient(rgba(0,0,0,.3) 15%, rgb(80,80,80) 90%);
+	background:-o-radial-gradient(rgba(0,0,0,.3) 15%, rgb(80,80,80) 90%);
+	background:-moz-radial-gradient(rgba(0,0,0,.3) 15%, rgb(80,80,80) 90%);
+	background:radial-gradient(rgba(0,0,0,.3) 15%, rgb(80,80,80) 90%);
+	border-top:solid 1px rgb(150,150,150);
+	border-bottom:solid 1px rgb(150,150,150);
+}
+.darkarea h2, .darkarea h3, .darkarea h4, .darkarea p{
+	color:white;
+}
+.doctorwho{
+	margin-bottom:20px;
+	position:relative;
+}
+.doctorwho h3{
+	font-size:150%;
+}
+#doctorwhoflexor{
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	justify-content:space-between;
+	position:relative;
+	min-height:200px;
+}
+#doctorwhoflexor>div{
+	width:24%;
+	background-color:rgb(40,40,40);
+	-webkit-transition: filter 1s;
+	transition: filter 1s;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	flex-direction:column;
+	min-height:200px;
+}
+#doctorwhoflexor>div:hover{/*Will not work in IE*/
+	-moz-filter:brightness(80%);
+	-webkit-filter:brightness(80%);
+	filter:brightness(80%);
+}
+#doctorwhoflexor .videotimetag{
+	background-color:rgb(50,50,50);
+	font-weight:bold;
+}
+#doctorwhoflexor .fa-play{
+	background-color:rgb(50,50,50);
+	color:rgb(50,50,50);
+}
+#doctorwhoflexor .timetag{
+	color:rgb(150,150,150);
+	border:none;
+	padding-left:0;
+}
+#doctorwhoflexor .timetag, #doctorwhoflexor h4{
+	margin:15px 15px;
+}
+.exhibitscroll{
+	display:none;
+	width:40px;
+	height:40px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:30%;
+}
+#exhibitscroll1{
+	background-color:white;
+	right:10px;
+}
+#exhibitscroll1:hover{
+	background-color:rgb(80,80,80);
+	transition:background-color 1s;
+}
+#exhibitscroll2{
+	background-color:rgba(255,255,255,.5);
+	right:51px;
+	}
+.bottomgreyarea{
+	background-color:rgb(80,80,80);
+}
+.tablechoices{
+	padding:20px 0;
+	border-bottom:solid 1px rgb(150,150,150);
+}
+.tablechoices ul{ 
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.tablechoices li{
+	color:white;
+	font-size:90%;
+	font-weight:bold;
+	display:inline-block;
+	margin:-1px 0;
+	padding:10px 0;
+	border-right:solid rgb(150,150,150) 1px;
+	width:14%;
+}
+.tablechoices li:hover, #finalinfo p:hover, #externallinking:hover{
+	text-decoration:underline;
+}
+#finalinfo{
+	margin-top:10px;
+}
+#finalinfo p{
+	display:inline-block;
+	margin:10px 10px 10px 0;
+	font-size:85%;
+}
+
+.finalsection p:last-child{
+	font-size:80%;
+}
+.finalsection span{
+	font-weight:bold;
+	color:white;
+}
+@media only screen and (min-width:991px){ 
+	.tablechoices li:not(:nth-child(6n+1)){
+		margin-left:15px;
+	}
+	.tablechoices li:nth-child(-n+6){
+		padding-top:0;
+	}
+	.tablechoices li:nth-last-child(-n+6){
+		padding-bottom:0;
+	}
+	.tablechoices li:nth-child(6n+6){
+		border:none;
+	}
+}
+@media only screen and (min-width:600px) and (max-width:990px){
+	.bbcnewsserviceflexor>div{
+		align-items:flex-start;
+	}
+	.bottomgreyradialarea{
+	background-color:rgb(70,70,70);
+	}
+	::-webkit-scrollbar-button{
+		display:none;
+	}
+	.tablechoices li{
+		width:23%;
+		margin:-1px 0 -1px -5px;/*-5 to avoid further wrapping when window shrinks which messes up the border-right layout*/
+		padding:10px 0;
+	}
+	.tablechoices li:nth-child(-n+4){
+		padding-top:0;
+	}
+	.tablechoices li:nth-last-child(-n+4){
+		padding-bottom:0;
+	}
+	.tablechoices li:nth-child(6n+6){
+		border-right:solid rgb(150,150,150) 1px;
+	}
+	.tablechoices li:nth-child(4n+4){
+		border:none;
+	}
+	.tablechoices li:not(:nth-child(4n+1)){
+		margin-left:11px;
+	}
+	#finalinfo p{
+	width:24%;
+	margin-right:0;
+	}
+}
+@media only screen and (max-width:750px){
+	.exhibitscroll{
+	display:inline-block;
+	}
+	#doctorwhoflexor{
+	width:100%;
+	display:inline-block;
+	overflow-x:auto;
+	white-space:nowrap;
+	}
+	#doctorwhoflexor>div{
+	display:inline-block;
+	width:290px;
+	margin:0 15px 15px 0;
+	white-space:normal;
+	vertical-align:top;
+	}
+}
+@media only screen and (min-width:400px) and (max-width:599px){
+	.bbcnewsserviceflexor{
+		flex-wrap:wrap;
+		position:relative;
+	}
+	.bbcnewsserviceflexor>div{
+		width:100%;
+	}
+	.bbcnewsserviceflexor>div:not(:last-child){
+		margin-bottom:15px;
+	}
+	.bbcnewsserviceflexor .titlestyle2{
+		position:absolute;
+		margin-left:40px;
+	}
+	.bottomgreyradialarea{
+	background-color:rgb(70,70,70);
+	}
+	.tablechoices li{
+		width:31%;
+		margin:-1px 0;
+		padding:10px 0;
+		border-right:solid rgb(150,150,150) 1px;
+	}
+	.tablechoices li:nth-child(3n+3){
+		border:none;
+	}
+	.tablechoices li:nth-child(-n+3){
+		padding-top:0;
+	}
+	.tablechoices li:nth-last-child(-n+3){
+		padding-bottom:0;
+	}
+	.tablechoices li:not(:nth-child(3n+1)){
+		margin-left:5px;
+	}
+	#finalinfo p{
+	width:32%;
+	margin-right:0;
+	}
+}
+@media only screen and (max-width:399px){
+	.bbcnewsserviceflexor{
+		flex-wrap:wrap;
+		position:relative;
+	}
+	.bbcnewsserviceflexor>div{
+		width:100%;
+	}
+	.bbcnewsserviceflexor>div:not(:last-child){
+		margin-bottom:15px;
+	}
+	.bbcnewsserviceflexor .titlestyle2{
+		position:absolute;
+		margin-left:40px;
+	}
+	.tablechoices li{
+		width:49%;
+		margin:-1px 0;
+		padding:10px 0;
+		border-right:solid rgb(150,150,150) 1px;
+	}
+	.tablechoices li:nth-child(3n+3){
+		border-right:solid rgb(150,150,150) 1px;
+	}
+	.tablechoices li:nth-child(even){
+		border:none;
+	}
+	.tablechoices li:nth-child(-n+2){
+		padding-top:0;
+	}
+	.tablechoices li:nth-last-child(-n+2){
+		padding-bottom:0;
+	}
+	#finalinfo{
+		margin-bottom:30px;
+	}
+	#finalinfo p{
+	width:49%;
+	margin-right:0;
+	}
+}
+/*----------------------------------------------------------------------
+End of bottom shaded region*/
+
+
+#back_home{
+	position:fixed;
+	bottom:0%;
+	right:0%;
+	padding:10px;
+	border-radius: 10px;
+	background-color: rgba(44, 175, 41,1);
+	color:rgb(255, 255, 255);
+	text-decoration: none;
+	z-index:100;
+}

@@ -1,0 +1,837 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> Technology - BBC News</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="bbcicon.png">
+	<link rel="stylesheet" href="{% static 'css/bbc_clone.css' %}">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+	<div class="topcookiebanner">
+		<div class="cookiebannercenter">
+			<div id="cookiesonthebbc"> <h3>Cookies on the BBC website</h3>	</div>	
+			<div id="topcookiestatement"> <p>The BBC has updated its cookie policy. We use cookies to ensure that we give you the best experience on our website. This includes cookies from third party social media websites if you visit a page which contains embedded content from social media. Such third party cookies may track your use of the BBC website. If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the BBC website. However, you can change your cookie settings at any time.</p>
+			</div>
+			<div id="cookiecontinue"> 
+				<h3>
+				<a href="#" target="_blank">Continue</a>
+				</h3>
+				<p>
+				<a href="#" target="_blank">Change settings</a><br/>
+				</p>
+				<p>
+				<a href="#" target="_blank">Find out more</a>
+				</p>
+			</div>
+		</div><!--Dark cookie notice area-->
+	</div>
+	<div class="productofferingbanner">
+		<div class="centered-content productofferings">
+			<img src="{% static 'images/bbcgrey.png' %}" id="bbcgrey" style="max-width:85px"/>
+			<span class="fa fa-user-circle"></span>
+			<ul>
+				<li><a href="#" id="signinwords">Sign in</a></li
+				><li><a href="#">News</a></li
+				><li><a href="#">Sport</a></li
+				><li><a href="#">Weather</a></li
+				><li><a href="#">iPlayer</a></li
+				><li><a href="#">TV</a></li
+				><li><a href="#">More</a><i class="fa fa-caret-down" id="fa-caret-down"></i></li>
+			</ul>
+			<div class="searchfunction">
+				<input type="text" placeholder="Search" id="searchbox"/>
+				<a href="#"><img src="{% static 'images/searchbutton.png' %}" id="searchbutton"/></a>
+			</div>
+		</div>
+	</div><!--top grey cookie area-->
+	<div class="redpageheading"> 
+		<div class="centered-content" id="redpageheadingcontainer">
+			<p id="redpageheadinghomelink"><a href="#">NEWS</a></p>
+			<p id="findlocalnews"><a href="#">Find local news <i class="fa fa-map-marker"></i></a></p>
+		</div>
+	</div> <!--red heading part-->
+	<div class="categorylist">
+		<div class="centered-content rednavbar">
+			<ul>
+				<li><a href="#">Home</a></li
+				><li><a href="#">UK</a></li
+				><li><a href="#">World</a></li
+				><li><a href="#">Business</a></li
+				><li><a href="#">Politics</a></li
+				><li id="selectednav"><a href="#" id="selectednava">Tech</a></li
+				><li><a href="#">Science</a></li
+				><li><a href="#">Health</a></li
+				><li><a href="#">Education</a></li
+				><li><a href="#">Entertainment &amp; Arts</a></li
+				><li><a href="#">Video &amp; Arts</a></li
+				><li><button id="rednavbarmore" onclick="alert('I have not learned Javascript yet...')">More<i class="fa fa-caret-down" id="fa-caret-down2"></i></button></li>
+			</ul>
+		</div>
+	</div><!--Red News Category-->
+	<div class="centered-content technologytitle">
+		<h3><span>Technology</span></h3>
+	</div><!--Title part-->
+	<div class="centered-content maincontent">
+		<div class="largebodyblock mainsection1">
+			<div class="asdabug">
+				<a href="#" class="fullcoveragelink"></a>
+				<h1 class="titlestyle"><a class="toplink" href="#">Asda bug exposed payment details</a></h1>
+				<div id="homemainimage"></div>
+				<div id="maincontentwords">
+					<p>Security vulnerabilities that put customers at risk 
+					have affected Asda's website for a couple of years, 
+					a security expert has revealed.</p>
+					<p class="timeposted">
+					<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+					<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div id="mainrelatednews">
+					<hr>
+					<p class="relatednewsstyle"><a href="#" class="toplink">Surveillance firm hit in hack attack</a></p>
+					<p class="relatednewsstyle"><a href="#" class="toplink">eBay flaw has existed for months</a></p>
+				</div>	
+			</div>	
+			<div class="twitteranddrone">
+				<div id="twittersuffers">
+					<a href="#" class="fullcoveragelink"></a>
+					<div id="twitterimage">
+					</div>
+					<h2 class="titlestyle"><a href="#" class="toplink">Twitter suffers technical fault</a></h2>
+					<p>The social network Twitter goes offline for many user
+					, with web visitors beeing greeted by an error page.</p>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">1 hours ago</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+					<div id="mainrelatednews">
+						<hr>
+						<p class="relatednewsstyle"><a href="#" class="toplink">Facebook down for second time in week</a></p>
+					</div>
+				</div>
+				<div id="dronelands">
+					<a href="#" class="fullcoveragelink"></a>
+					<div id="dronelandsimage">
+						<div class="videotag">
+							<span class="fa fa-play"></span><span class="videotimetag">1:13</span>
+						</div>
+					</div>
+					<h2 class="titlestyle"><a href="#" class="toplink">Drone lands on moving car in Germany</a></h2>
+					<p>Roboticists in Germany have taught a drone how to land itself on a car travelling at 75km/h (47mph)</p>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">44 minutes ago</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+					<div id="mainrelatednews">
+						<hr>
+						<p class="relatednewsstyle"><a href="#" class="toplink"><span class="fa fa-caret-square-o-right"></span>BBC reporter breaks 'world's safest' drone</a></p>
+						<p class="relatednewsstyle"><a href="#" class="toplink"><span class="fa fa-caret-square-o-right"></span>Drone flies over sea to deliver package</a></p>
+					</div>
+				</div>
+				<div id="articlerows">
+					<div id="samsungupdates">
+						<a href="#" class="fullcoveragelink"></a>
+						<h2 class="titlestyle"><a href="#" class="toplink">Samsung updates sticky stylus holder</a></h2>
+						<p class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">1 hours ago</span>
+							<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+						</p>
+					</div>
+					<div id="minecrafttolaunch">
+						<a href="#" class="fullcoveragelink"></a>
+						<h2 class="titlestyle"><a href="#" class="toplink">Minecraft to launch education edition</a></h2>
+						<p class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">4 hours ago</span>
+							<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+						</p>
+					</div>
+					<div id="askfm">
+						<a href="#" class="fullcoveragelink"></a>
+						<h2 class="titlestyle"><a href="#" class="toplink">Ask.fm reveals top teen slang</a></h2>
+						<p class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">3 hours ago</span>
+							<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="articletable">
+				<div>
+					<a href="#" class="fullcoveragelink"></a>
+					<h4 class="titlestyle"><a href="#" class="toplink">Government urged to use blockchain tech</a></h4>
+					<p>
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<a href="#" class="fullcoveragelink"></a>
+					<h4 class="titlestyle"><a href="#" class="toplink">Device makers face child labour claims</a></h4>
+					<p>
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<a href="#" class="fullcoveragelink"></a>
+					<h4 class="titlestyle"><a href="#" class="toplink">Friends Reunited website to close</a></h4>
+					<p>
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<a href="#" class="fullcoveragelink"></a>
+					<h4 class="titlestyle"><a href="#" class="toplink">Is the Bitcoin experiment doomed?</a></h4>
+					<p>
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<a href="#" class="fullcoveragelink"></a>
+					<h4 class="titlestyle"><a href="#" class="toplink">Peshawar massacre video game pulled</a></h4>
+					<p>
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<a href="#" class="fullcoveragelink"></a>
+					<h4 class="titlestyle"><a href="#" class="toplink">Pakistan unblocks access to YouTube</a></h4>
+					<p>
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+			</div>
+			<div class="newtech">
+				<h2 class="sectiontitle">New Tech at CES</h2>
+				<div>
+					<div class="videothumbfullwidth" id="tvplays">
+						<div class="videotag">
+							<span class="fa fa-play"></span>
+							<span class="videotimetag">1:13</span>
+						</div>
+					</div>
+					<h4 class="titlestyle">TV plays different audio to two viewers</h4>
+				</div>
+				<div>
+					<div class="videothumbfullwidth" id="caseadds">
+						<div class="videotag">
+							<span class="fa fa-play"></span><span class="videotimetag">1:13</span>
+						</div>
+					</div>
+					<h4 class="titlestyle">Case adds hardware modules to phones</h4>
+				</div>
+				<div>
+					<div class="videothumbfullwidth" id="bmwshows">
+						<div class="videotag">
+							<span class="fa fa-play"></span><span class="videotimetag">1:13</span>
+						</div>
+					</div>
+					<h4 class="titlestyle">BMW shows gesture-controlled car</h4>
+				</div>
+				<div>
+					<div class="videothumbfullwidth" id="bbcreporter">
+						<div class="videotag">
+							<span class="fa fa-play"></span><span class="videotimetag">1:13</span>
+						</div>
+					</div>
+					<h4 class="titlestyle">BBC reporter breaks 'world's safest' drone</h4>
+				</div>
+			</div>
+		</div>
+		<div class="smallbodyblock sidebar1">
+			<h2 class="sectiontitle">Watch/Listen</h2>
+			<div>
+				<a href="#" class="fullcoveragelink"></a>
+				<div class="videothumbhalfwidth" id="uksciencechief">
+					<div class="videotag">
+						<span class="fa fa-play"></span>
+						<span class="videotimetag">1:13</span>
+					</div>
+				</div>
+				<div class="sidebar1title">
+					<h4 class="titlestyle"><a href="#" class="toplink">UK science chief backs blockchains</a></h4>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">1 hours ago</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+			</div>
+			<div>
+				<a href="#" class="fullcoveragelink"></a>
+				<div class="videothumbhalfwidth" id="droneregister">
+					<div class="videotag">
+						<span class="fa fa-play"></span>
+						<span class="videotimetag">1:13</span>
+					</div>
+				</div>
+				<div class="sidebar1title">
+					<h4 class="titlestyle"><a href="#" class="toplink">Drone register gives 'accountability'</a></h4>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">18 January 2016</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+			</div>
+			<div>
+				<a href="#" class="fullcoveragelink"></a>
+				<div class="videothumbhalfwidth" id="spacex">
+					<div class="videotag">
+						<span class="fa fa-play"></span>
+						<span class="videotimetag">1:13</span>
+					</div>
+				</div>
+				<div class="sidebar1title">
+					<h4 class="titlestyle"><a href="#" class="toplink">SpaceX rocket explodes during landing</a></h4>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">18 January 2016</span>
+						<a href="#" class="toplink"><span class="categorytag">Science &amp; Environment</span></a>
+					</p>
+				</div>
+			</div>
+			<div>
+				<a href="#" class="fullcoveragelink"></a>
+				<div class="videothumbhalfwidth" id="whatisvpn">
+					<div class="videotag">
+						<span class="fa fa-play"></span>
+						<span class="videotimetag">1:13</span>
+					</div>
+				</div>
+				<div class="sidebar1title">
+					<h4 class="titlestyle"><a href="#" class="toplink">What is a VPN service?</a></h4>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">18 January 2016</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+			</div>
+			<div>
+				<a href="#" class="fullcoveragelink"></a>
+				<div class="videothumbhalfwidth" id="chargeyourphone">
+					<div class="videotag">
+						<span class="fa fa-play"></span>
+						<span class="videotimetag">1:13</span>
+					</div>
+				</div>
+				<div class="sidebar1title">
+					<h4 class="titlestyle"><a href="#" class="toplink">Charge your phone with a hand crank</a></h4>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">18 January 2016</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+			</div>
+			<div>
+				<a href="#" class="fullcoveragelink"></a>
+				<div class="videothumbhalfwidth" id="dronesbreak">
+					<div class="videotag">
+						<span class="fa fa-play"></span>
+						<span class="videotimetag">1:13</span>
+					</div>
+				</div>
+				<div class="sidebar1title">
+					<h4 class="titlestyle"><a href="#" class="toplink">Drones break Guinness World Record</a></h4>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">18 January 2016</span>
+						<a href="#" class="toplink"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="largebodyblock mainsection2">
+			<div class="alsointhenews">
+				<h2 class="sectiontitle">Also in the News</h2>
+				<div>
+					<div class="videothumbhalfwidth" id="hawking">
+					</div>
+					<div class="sidebar1title">
+						<h4 class="titlestyle">Hawking warns on 'own goal' disaster</h4>
+						<p class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">19 January 2016</span>
+							<a href="#"><span class="categorytag">Science &amp; Environment</span></a>
+						</p>
+					</div>
+				</div>
+				<div>
+					<div class="videothumbhalfwidth" id="whysnoop">
+					</div>
+					<div class="sidebar1title">
+						<h4 class="titlestyle"><span id="newsbeat">NEWSBEAT</span> Why Snoop was mad at Xbox</h4>
+						<p  class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">14 January 2016</span>
+							<a href="#"><span class="categorytag">Home</span></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="featuresandanalysis">
+				<h2 class="sectiontitle">Features &amp; Analysis</h2>
+				<div>
+					<div class="videothumbfullwidth someimage_pic">
+					</div>
+					<h4 class="titlestyle">Bye bye cash?</h4>
+					<p>How mobile payments are changing India's economy</p>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<div class="videothumbfullwidth someimage_pic">
+					</div>
+					<h4 class="titlestyle">Air-biz-nb?</h4>
+					<p>Meet the people renting out their homes as offices</p>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<div class="videothumbfullwidth someimage_pic">
+					</div>
+					<h4 class="titlestyle">Work snooping</h4>
+					<p>How does it feel to have your emails investigated?</p>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<div class="videothumbfullwidth someimage_pic">
+					</div>
+					<h4 class="titlestyle">Internet pioneer</h4>
+					<p>How David Bowie helped shape the web</p>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<div class="videothumbfullwidth someimage_pic">
+					</div>
+					<h4 class="titlestyle">Detroit motors</h4>
+					<p>Highlights from the US' auto show</p>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+				<div>
+					<div class="videothumbfullwidth someimage_pic">
+					</div>
+					<h4 class="titlestyle">A Wall-E world?</h4>
+					<p>Can tech help tackle the planet's waste crisis?</p>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						<a href="#"><span class="categorytag">Technology</span></a>
+					</p>
+				</div>
+			</div>
+			<div class="ourexperts">
+				<h2 class="sectiontitle">Our Experts</h2>
+				<div>
+					<div class="textbubble">
+						<h4 class="titlestyle">The internet - not an equalizer</h4>
+						<p class="expertwords">The benefits of technology are not being fully realized in developing countries, says a World Bank report</p>
+						<p class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						</p>
+					</div>
+					<div class="expertinfo">
+						<p class="expertbio"><a href="#"><span class="expertname">Rory Cellan-Jones</span> Technology correspondent</a></p>
+						<img class="expertbio" src="{% static 'images/rorycellanjones.png' %}"/>
+					</div>
+				</div>
+				<div>
+					<div class="textbubble">
+						<h4 class="titlestyle">Meet the robotic cat for the elderly</h4>
+						<p class="expertwords">Affordable robotic companion pets are increasingly being seen as a key tool in combating loneliness</p>
+						<p class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">2 hours ago</span>
+						</p>
+					</div>
+					<div class="expertinfo">
+						<p class="expertbio"><a href="#"><span class="expertname">Dave Lee</span> North America technology reporter</a></p>
+						<img class="expertbio" src="{% static 'images/davelee.png' %}"/>
+					</div>
+				</div>
+			</div>
+			<div class="click">
+				<h2 class="sectiontitle">Click - the world of technology</h2>
+				<div class="clickdivflexor">
+					<div class="clickdivs">
+						<div class="videothumbfullwidth">
+							<div class="videotag">
+								<span class="fa fa-play"></span>
+								<span class="videotimetag">1:13</span>
+							</div>
+						</div>
+						<div class="contentseparator">
+							<h4 class="titlestyle">Will 3D-printed running shoe take off?</h4>
+							<p class="timeposted">
+								<span class="fa fa-clock-o"></span><span class="timetag">13 January 2016</span>
+								<a href="#"><span class="categorytag">Technology</span></a>
+							</p>
+						</div>
+					</div>
+					<div class="clickdivs">
+						<div class="videothumbfullwidth">
+							<div class="videotag">
+								<span class="fa fa-play"></span>
+								<span class="videotimetag">1:13</span>
+							</div>
+						</div>
+						<div class="contentseparator">
+							<h4 class="titlestyle">Will the future be augmented reality?</h4>
+							<p class="timeposted">
+								<span class="fa fa-clock-o"></span><span class="timetag">11 January 2016</span>
+								<a href="#"><span class="categorytag">Technology</span></a>
+							</p>
+						</div>
+					</div>
+					<div class="clickdivs" id="lastclickdivs">
+						<div class="videothumbfullwidth">
+							<div class="videotag">
+								<span class="fa fa-play"></span>
+								<span class="videotimetag">1:13</span>
+							</div>
+						</div>
+						<div class="contentseparator">
+							<h4 class="titlestyle">360-degree VR camera put to the test</h4>
+							<p class="timeposted">
+								<span class="fa fa-clock-o"></span><span class="timetag">7 January 2016</span>
+								<a href="#"><span class="categorytag">Technology</span></a>
+							</p>
+						</div>
+					</div><!--not sure why the flex item behaves like inline element with respect to its parent, but we have to close the whitespace in html markup
+					--></div>
+			</div>
+			<div class="specialreports"><!--IE wraps an anchor tag around it which messes up the layout, not sure why....-->
+				<h2 class="sectiontitle">Special reports</h2>
+				<div id="ces2016">
+					<div id="ces2016mainimage">
+					</div>
+					<h2 class="titlestyle" id="ces2016title">CES 2016: Tech extravaganza</h2>
+					<p id="ces2016content">Gadgets, robots, cars and more at Vegas' giant tech show</p>
+					<p class="timeposted">
+						<span class="fa fa-clock-o"></span><span class="timetag">4 January 2016</span>
+					</p>
+				</div>
+				<div id="specialreportsmall">
+					<div>
+						<div class="videothumbfullwidth someimage">
+						</div>
+						<h4 class="titlestyle">Video games</h4>
+						<p class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">15 June 2015</span>
+						</p>
+					</div>
+					<div>
+						<div class="videothumbfullwidth someimage">
+						</div>
+						<h4 class="titlestyle">Intelligent Machines</h4>
+						<p class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">14 September 2015</span>
+						</p>
+					</div>
+					<div>
+						<div class="videothumbfullwidth someimage">
+						</div>
+						<h4 class="titlestyle">#BBCTrending</h4>
+						<p class="timeposted">
+							<span class="fa fa-clock-o"></span><span class="timetag">10 December 2013</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="smallbodyblock sidebar2">
+			<div class="sharewith">
+				<h2 class="sectiontitle">Share with BBC News</h2>
+				<ul class="fa-ul">
+					<li><span class="fa-li fa fa-mobile fa-lg"></span>Send an SMS or MMS to 61124</li>
+					<li><span class="fa-li fa fa-envelope-o"></span>Email us at <strong id="email">haveyoursay@bbc.co.uk</strong></li>
+					<li><span class="fa-li fa fa-twitter"></span>Follow Have Your Say on <strong id="twitteraccount">Twitter</strong></li>
+				</ul>
+			</div>
+			<div class="follow">
+				<h3 class="sectiontitle">Follow Us</h3>
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li id="rssnews"><a href="#">RSS News Feed</a></li>
+				</ul>
+			</div>
+			<div class="mostpopular">
+				<div id="listhead">
+					<h2 class="sectiontitle">Most Popular</h2>
+					<p>From Technology</p>
+				</div>
+				<div class="popularnewsflexor">
+					<div class="popularnews">
+						<p class="dayoftheweek">MON</p>
+						<p class="popularnewstitle">Friends Reunited website to close down</p>
+					</div>
+					<div class="popularnews">
+						<p class="dayoftheweek">SUN</p>
+						<p class="popularnewstitle">George W Bush tops Wikipedia 15th birthday list</p>
+					</div>
+					<div class="popularnews">
+						<p class="dayoftheweek">SAT</p>
+						<p class="popularnewstitle">Netflixcracks down on proxy streaming</p>
+					</div>
+					<div class="popularnews">
+						<p class="dayoftheweek">FRI</p>
+						<p class="popularnewstitle">Netflix cracks down on proxy streaming</p>
+					</div>
+					<div class="popularnews">
+						<p class="dayoftheweek">THU</p>
+						<p class="popularnewstitle">Nest thermostat bug leaves users cold</p>
+					</div>
+				</div>
+			</div>
+			<div class="elsewhere">
+				<h2 class="sectiontitle">Elsewhere on the BBC</h2>
+				<div class="elsewherecontent">
+					<div class="videothumbhalfwidth">
+					</div>
+					<div class="elsewherecontentdetail">	
+						<h4 class="titlestyle">Dangerous words</h4>
+						<p>The Bible's turbulent history</p>
+					</div>
+				</div>
+				<div class="elsewherecontent">
+					<div class="videothumbhalfwidth">
+					</div>
+					<div class="elsewherecontentdetail">
+						<h4 class="titlestyle">Smoothie wars</h4>
+						<p>Is it worth buying a budget bullet blender?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="centered-content moreinfo">
+		<div class="podcasts">
+			<h2 class="sectiontitle">Podcasts</h2>
+			<div class="podcastwindow">
+				<div id="largescreen">
+					<div class="largepodcastthumb">
+						<h2 class="titlestyle2">Tech Tent: Viva, Las Vegas</h2>
+						<p class="titlestyle2">Rory is at the CES technology show in Las Vegas</p>
+					</div>
+				</div>
+				<div id="smallscreen">
+					<div>
+						<div class="videothumbfullwidth">
+						</div>
+						<h4 class="titlestyle2">Game On: Telling stories</h4>
+						<p>Students discuss writing for video games</p>
+					</div>
+					<div>
+						<div class="videothumbfullwidth">
+						</div>
+						<h4 class="titlestyle2">Click World: VR gets real</h4>
+						<p>The evolution of virtual reality</p>
+					</div>
+					<div>
+						<div class="videothumbfullwidth">
+						</div>
+						<h4 class="titlestyle2">Tech Ohine In</h4>
+						<p>Gadget detective Fevzi Turklap provides tech advice</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="morefrombbc">
+			<h2 class="sectiontitle">More from BBC News</h2>
+			<div id="morefrombbcflexor">
+				<div>
+					<a href="#">
+					<div class="videothumbfullwidth">
+					</div>
+					<span class="categorytag">Business</span>
+					<div class="redseparator"></div>
+					<h4 class="titlestyle">China growth slowest in 25 years</h4>
+					</a>
+				</div>
+				<div>
+					<a href="#">
+					<div class="videothumbfullwidth">
+					</div>
+					<span class="categorytag">UK Politics</span>
+					<div class="redseparator"></div>
+					<h4 class="titlestyle">Election polisters 'got samples wrong'</h4>
+					</a>
+				</div>
+				<div>
+					<a href="#">
+					<div class="videothumbfullwidth">
+					</div>
+					<span class="categorytag">Health</span>
+					<div class="redseparator"></div>
+					<h4 class="titlestyle">'Natural' fertilisation device for IVF</h4>
+					</a>
+				</div>
+				<div>
+					<a href="#">
+					<div class="videothumbfullwidth">
+					</div>
+					<span class="categorytag">Education &amp; Family</span>
+					<div class="redseparator"></div>
+					<h4 class="titlestyle">'Education against hate', urges government</h4>
+					</a>
+				</div>
+				<div>
+					<a href="#">
+					<div class="videothumbfullwidth">
+					</div>
+					<span class="categorytag">Technology</span>
+					<div class="redseparator"></div>
+					<h4 class="titlestyle">ASDA bug exposed payment details</h4>
+					</a>
+				</div>
+				<div>
+					<a href="#">
+					<div class="videothumbfullwidth">
+					</div>
+					<span class="categorytag">Science &amp; Environment</span>
+					<div class="redseparator"></div>
+					<h4 class="titlestyle">Hawking warns on 'own goal' disaster</h4>
+					</a>
+				</div>
+				<div>
+					<a href="#">
+					<div class="videothumbfullwidth">
+					</div>
+					<span class="categorytag">Entertainment &amp; Arts</span>
+					<div class="redseparator"></div>
+					<h4 class="titlestyle">Eagles guitarist Glenn Frey, 67, dies</h4>
+					</a>
+				</div>
+				<div>
+					<a href="#">
+					<div class="videothumbfullwidth">
+					</div>
+					<span class="categorytag">Magazine</span>
+					<div class="redseparator"></div>
+					<h4 class="titlestyle">Roast fat</h4>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="darkarea bottomdarkarea">
+		<div class="centered-content bbcnewsservice">
+			<h2>BBC News Services</h2>
+			<div class="bbcnewsserviceflexor">
+				<div><p><i class="fa fa-mobile fa-lg"></i></p><p class="titlestyle2">On your mobile</p></div>
+				<div><p><i class="fa fa-television"></i></p><p class="titlestyle2">On your connected tv</p></div>
+				<div><p><i class="fa fa-inbox"></i></p><p class="titlestyle2">Get news alerts</p></div>
+				<div><p><i class="fa fa-envelope-o"></i></p><p class="titlestyle2">Contact BBC News</p></div>
+			</div>
+		</div>
+	</div>
+	<div class="darkarea bottomgreyradialarea">
+		<div class="centered-content doctorwho">
+			<h3>Doctor Who</h3>
+			<div id="doctorwhoflexor">
+				<div>
+					<div class="videothumbfullwidth">
+						<div class="videotag">
+							<span class="fa fa-play"></span>
+							<span class="videotimetag">5 MIN</span>
+						</div>
+					</div>
+					<div class="contentseparator">
+						<h4>Who are the superstars playing in Hull?</h4>
+						<p class="timetag">Radio4</p>
+					</div>
+				</div>
+				<div>
+					<div class="videothumbfullwidth">
+					</div>
+					<div class="contentseparator">
+						<h4>Epic Big Weekend moments revisited</h4>
+						<p class="timetag">Radio1</p>
+					</div>
+				</div>
+				<div>
+					<div class="videothumbfullwidth">
+						<div class="videotag">
+							<span class="fa fa-play"></span>
+							<span class="videotimetag">12 MIN</span>
+						</div>
+					</div>
+					<div class="contentseparator">
+						<h4>Kasabian quiz: can you fill the blanks?</h4>
+						<p class="timetag">Radio1</p>
+					</div>
+				</div>
+				<div>
+					<div class="videothumbfullwidth">
+						<div class="videotag">
+							<span class="fa fa-play"></span>
+							<span class="videotimetag">6 MIN</span>
+						</div>
+					</div>
+					<div class="contentseparator">
+						<h4>The surprising snacks of the future</h4>
+						<p class="timetag">Radio4</p>
+					</div>
+				</div>
+			</div>
+			<div class="exhibitscroll" id="exhibitscroll1"></div>
+			<div class="exhibitscroll" id="exhibitscroll2"></div>
+		</div>
+	</div>
+	<div class="darkarea bottomgreyarea">
+		<div class="centered-content pageending">
+			<div class="tablechoices">
+				<ul>
+					<li>News</li>
+				    <li>TV</li>
+				    <li>Food</li>
+				    <li>Music</li>
+				    <li>Taster</li>
+					<li>Sport</li>
+					<li>Radio</li>
+					<li>iWonder</li>
+					<li>Earth</li>
+					<li>Local</li>
+					<li>Weather</li>
+					<li>CBBC</li>
+					<li>Bitesize</li>
+					<li>Arts</li>
+					<li>iPlayer</li>
+					<li>CBeebies</li>
+					<li>Travel</li>
+					<li>Make It Digital</li>
+				</ul>
+			</div>
+			<div class="finalsection">
+				<div id="finalinfo">
+					<p>Terms of Use</p>
+					<p>About the BBC</p>
+					<p>Privacy Policy</p>
+					<p>Cookies</p>
+					<p>Accessibility Help</p>
+					<p>Parental Guidance</p>
+					<p>Contact the BBC</p>
+				</div>
+				<p><span>Copyright &copy; 2016 BBC.</span> The BBC is not responsible for the content of external sites. <span id="externallinking">Read about our approach to external linking.</span></p>
+			</div>
+		</div>
+	</div>
+	<a href="{% url 'home' %}"  id='back_home'>Back to Home</a>
+</body>
+	
+</html>
