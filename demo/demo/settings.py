@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-from demo.secret import SECRET_KEY
+import demo.secret
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR=os.path.join(BASE_DIR, 'templates')
@@ -23,7 +23,7 @@ TEMPLATE_DIR=os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.environ['DJANGO_ALLOWED_HOST1'],os.environ['DJANGO_ALLOWED_HOST2'],]
 
 
 # Application definition
@@ -48,7 +48,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-SECRET_KEY = SECRET_KEY
+SECRET_KEY = os.environ['DJIANG_SECRET_KEY']
 
 ROOT_URLCONF = 'demo.urls'
 
@@ -74,12 +74,24 @@ WSGI_APPLICATION = 'demo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if 'Coding' in BASE_DIR:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'chunghanlee1$firstsql',
+        'USER': 'chunghanlee1',
+        'PASSWORD': os.environ['DB_PASSWORD'],
+        'HOST': os.environ['DB_HOST_ADDRESS'],
+        'TEST': {'NAME':'chunghanlee1$test_firstsql'},
+        }
+    }
 
 
 # Password validation
