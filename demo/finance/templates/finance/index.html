@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title_block %}
+    <title>Financial Analysis Home</title>
+{% endblock %}
+
+
+{% block content_block %}
+    <br>
+    {% for message in messages %}
+        <div class='alert alert-success'>{{message}}</div>
+    {% endfor %}
+    
+    <!--NOT JUST AUTHENTICATED BUT ALSO NEED TO CHECK IF FINANCIAL INFO IS PRESENT-->
+    {% if user.is_authenticated and user.financial_info.slug %}
+        <h1>Update Financial Information</h1>
+        <a href="{% url 'finance:update' slug=user.financial_info.slug %}" class='btn btn-dark'>Update Info</a>
+        <a href="{% url 'finance:req_return' slug=user.financial_info.slug %}" class='btn btn-dark'>Go to Req Return Analysis</a>
+        <a href="{% url 'finance:simulation' slug=user.financial_info.slug %}" class='btn btn-dark'>Go to Simulation Analysis</a>
+        <a href="{% url 'finance:prediction' slug=user.financial_info.slug %}" class='btn btn-dark'>Go to Financial Wellbeing Prediction</a>
+    {% else %}
+        <h1>Create Financial Information</h1>
+        <a href="{% url 'finance:create' %}" class='btn btn-dark'>Create Info</a>
+    {% endif %}
+    
+{% endblock %}

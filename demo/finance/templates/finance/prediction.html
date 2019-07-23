@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title_block %}
+    <title>Financial Wellbeing</title>
+{% endblock %}
+
+
+{% block content_block %}
+<h1>Analysis Result</h1>
+{% if diagnosis %}
+    <h1>{{diagnosis}}</h1>
+{% endif %}
+{% endblock %}

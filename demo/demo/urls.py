@@ -15,10 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
-from demo import views
+from demo import views, settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('^bbc_clone/$', include('bbc_clone.urls', namespace='bbc_clone')),
     re_path('^$', views.HomeTemplateView.as_view(), name='home'),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
+    path('finance/', include('finance.urls', namespace='finance')),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns=[re_path('^__debug__/', include(debug_toolbar.urls))]+urlpatterns

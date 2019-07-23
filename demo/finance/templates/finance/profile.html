@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title_block %}
+    <title>Sign Up</title>
+{% endblock %}
+
+
+{% block content_block %}
+    <h1>Your Account Information</h1>
+    <h3>Account Name: {{financial_info.user.username}}</h3>
+    <h3>Name: {{financial_info.user.first_name}} {{financial_info.user.last_name}}</h3>
+    <br>
+    <h2>Financial Information</h2>
+    <h3>Income: {{financial_info.income}}</h3>
+    <h3>Income Growth: {{financial_info.income_growth}}</h3>
+    <h3>Spending: {{financial_info.spending}}</h3>
+    <h3>Inflation: {{financial_info.inflation}}</h3>
+    <h3>Savings: {{financial_info.savings}}</h3>
+    <h3>Current Age: {{financial_info.current_age}}</h3>
+    <h3>Expected Mortality Age: {{financial_info.death_age}}</h3>
+    <h3>Retirement Age: {{financial_info.retirement_age}}</h3>
+    <h3>Investment Riskiness: {{financial_info.investment_risk}}</h3>
+    <br>
+    <h2>Survey Responses</h2>
+    <h3>{{ FWB1_3_description}}: {{financial_info.FWB1_3}}</h3>
+    <h3>{{ FWB1_5_description }}: {{financial_info.FWB1_5}}</h3>
+    <h3>{{ FWB1_6_description }}: {{financial_info.FWB1_6}}</h3>
+    <h3>{{ FWB2_1_description }}: {{financial_info.FWB2_1}}</h3>
+    <h3>{{ FWB2_3_description }}: {{financial_info.FWB2_3}}</h3>
+    <a href="{% url 'finance:update' slug=user.financial_info.slug %}" class='btn btn-dark'>Edit</a>
+{% endblock %}

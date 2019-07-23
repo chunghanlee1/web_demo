@@ -35,7 +35,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap4',
     'bbc_clone',
+    'accounts',
+    'finance',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -46,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 SECRET_KEY = os.environ['DJIANG_SECRET_KEY']
@@ -134,3 +139,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS= [
     os.path.join(BASE_DIR,'static'),
 ]
+
+LOGIN_REDIRECT_URL='/'
+LOGOUT_REDIRECT_URL='/'
+
+INTERNAL_IPS=['127.0.0.1']
