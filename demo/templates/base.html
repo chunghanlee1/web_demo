@@ -34,12 +34,10 @@
                 <li>
                     <a class='nav-link' href="{% url 'bbc_clone:clone' %}">BBC Clone</a>
                 </li>
-                <li>
-                    <a class='nav-link' href="{% url 'finance:index' %}">Financial Analysis</a>
-                </li>
+                
                 {% if user.is_authenticated %}
                 <li>
-                    <a class='nav-link' href="{% url 'finance:profile' slug=user.financial_info.slug %}">Account Detail</a>
+                    <a class='nav-link' href="{% url 'finance:index' %}">Financial Analysis</a>
                 </li>
                 <li>
                     <a class='nav-link' href="{% url 'accounts:logout' %}">Logout</a>
