@@ -1,7 +1,6 @@
 import numpy as np
 import scipy.stats as stats
 import random
-import pylab as plt
 from bokeh.io import show
 from bokeh.plotting import figure
 from bokeh.embed import components
