@@ -6,7 +6,7 @@ User = get_user_model()
 
 class FinancialInfo(models.Model):
     user=models.OneToOneField(User, on_delete=models.CASCADE, related_name='financial_info')
-    slug=models.SlugField(allow_unicode=True, unique=True, default='default_slug')
+    slug=models.SlugField(allow_unicode=True, null=True, default=None)
     income=models.PositiveIntegerField()
     income_growth=models.FloatField()
     spending=models.PositiveIntegerField()
